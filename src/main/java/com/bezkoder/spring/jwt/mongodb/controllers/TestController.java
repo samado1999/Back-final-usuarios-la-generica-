@@ -62,7 +62,7 @@ public class TestController {
 		return "Admin Board.";
 	}
 
-	@GetMapping("/admin-producto")
+	@PostMapping("/admin-producto")
 	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<String> adminAccessProducto(@RequestBody List<Producto> productos) {
 		try {
